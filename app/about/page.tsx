@@ -69,7 +69,7 @@ export default function AboutPage() {
                 Our Story
               </span>
               <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground text-balance">
-                About {siteConfig.name}
+                Our Story: About {siteConfig.name}
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
                 For over 15 years, we have been transforming bathrooms across 

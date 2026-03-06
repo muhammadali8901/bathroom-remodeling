@@ -4,70 +4,12 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import { ArrowUpRight, ShowerHead, Bath, Droplets, Grid3X3, Lightbulb, Wrench, Home } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { bathroomServices } from "@/lib/bathroom-services";
 
-const services = [
-  {
-    icon: ShowerHead,
-    title: "Shower Remodeling",
-    description: "Custom shower upgrades with premium tile, glass enclosures, and modern fixtures.",
-    href: "/bathroom-remodeling#shower-remodeling",
-  },
-  {
-    icon: Bath,
-    title: "Bathtub Installation",
-    description: "Professional bathtub installation designed for comfort, performance, and lasting style.",
-    href: "/bathroom-remodeling#bathtub-installation",
-  },
-  {
-    icon: Bath,
-    title: "Bathtub Replacement",
-    description: "Replace worn or outdated tubs with updated options that fit your bathroom layout.",
-    href: "/bathroom-remodeling#bathtub-replacement",
-  },
-  {
-    icon: ShowerHead,
-    title: "Walk-in Shower Installation",
-    description: "Accessible walk-in shower installations that combine clean design with everyday function.",
-    href: "/bathroom-remodeling#walk-in-shower-installation",
-  },
-  {
-    icon: Grid3X3,
-    title: "Bathroom Tile Installation",
-    description: "Expert tile installation for shower surrounds, walls, backsplashes, and bathroom floors.",
-    href: "/bathroom-remodeling#bathroom-tile-installation",
-  },
-  {
-    icon: Home,
-    title: "Bathroom Vanity Installation",
-    description: "Install stylish vanities with smart storage, durable tops, and coordinated sink layouts.",
-    href: "/bathroom-remodeling#bathroom-vanity-installation",
-  },
-  {
-    icon: Grid3X3,
-    title: "Bathroom Flooring",
-    description: "Upgrade bathroom flooring with moisture-resistant materials built for beauty and durability.",
-    href: "/bathroom-remodeling#bathroom-flooring",
-  },
-  {
-    icon: Lightbulb,
-    title: "Bathroom Lighting Upgrade",
-    description: "Improve brightness, ambiance, and efficiency with layered bathroom lighting upgrades.",
-    href: "/bathroom-remodeling#bathroom-lighting-upgrade",
-  },
-  {
-    icon: Droplets,
-    title: "Bathroom Sink Installation",
-    description: "Bathroom sink installations with updated plumbing connections and fixture selections.",
-    href: "/bathroom-remodeling#bathroom-sink-installation",
-  },
-  {
-    icon: Wrench,
-    title: "Bathroom Plumbing Upgrade",
-    description: "Modern plumbing upgrades that improve water flow, efficiency, and long-term reliability.",
-    href: "/bathroom-remodeling#bathroom-plumbing-upgrade",
-  },
-];
+const services = bathroomServices
+  .filter((service) => service.name !== "Bathroom Remodeling")
+  .slice(0, 8); // show 8 micro services
 
 export default function ServicesGrid() {
   const ref = useRef(null);

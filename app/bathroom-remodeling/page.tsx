@@ -19,7 +19,6 @@ import {
   Grid3X3,
   Lightbulb,
   Droplets,
-  Wrench,
   Home,
   TrendingUp,
   DollarSign,
@@ -155,35 +154,7 @@ const subServices = [
     ],
   },
   {
-    id: "bathroom-sink-installation",
-    icon: Droplets,
-    title: "Bathroom Sink Installation",
-    description:
-      "Upgrade your sink setup with new basin styles, faucet pairings, and clean connections that support both daily use and overall design.",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2574&auto=format&fit=crop",
-    features: [
-      "Undermount, vessel, and integrated sinks",
-      "Updated faucet and drain assemblies",
-      "Countertop compatibility planning",
-      "Precise alignment and fitment",
-      "Clean finish and caulking work",
-    ],
-  },
-  {
-    id: "bathroom-plumbing-upgrade",
-    icon: Wrench,
-    title: "Bathroom Plumbing Upgrade",
-    description:
-      "Improve performance behind the walls with plumbing upgrades that support new fixtures, better efficiency, and more reliable everyday use.",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2574&auto=format&fit=crop",
-    features: [
-      "Fixture supply and drain updates",
-      "Shower and tub plumbing improvements",
-      "Vanity and sink line adjustments",
-      "Efficiency-focused fixture replacements",
-      "Code-conscious installation practices",
-    ],
-  },
+  // trimmed to 8 services per request
 ];
 
 const issues = [

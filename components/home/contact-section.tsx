@@ -16,6 +16,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { siteConfig } from "@/lib/site-config";
+import { bathroomServices } from "@/lib/bathroom-services";
 
 export default function ContactSection() {
   const ref = useRef(null);
@@ -183,13 +184,15 @@ export default function ContactSection() {
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="bathroom-remodel">Bathroom Remodeling</SelectItem>
-                          <SelectItem value="shower-remodel">Shower Remodel</SelectItem>
-                          <SelectItem value="bathtub-installation">Bathtub Installation</SelectItem>
-                          <SelectItem value="walk-in-shower-installation">Walk-in Shower Installation</SelectItem>
-                          <SelectItem value="bathroom-tile-installation">Bathroom Tile Installation</SelectItem>
-                          <SelectItem value="bathroom-vanity-installation">Bathroom Vanity Installation</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
+                      {bathroomServices
+                        .filter((service) => service.name !== "Bathroom Remodeling")
+                        .slice(0, 8)
+                        .map((service) => (
+                        <SelectItem key={service.href} value={service.href}>
+                          {service.name}
+                        </SelectItem>
+                      ))}
+                      <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>

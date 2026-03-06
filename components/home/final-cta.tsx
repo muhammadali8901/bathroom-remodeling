@@ -66,7 +66,7 @@ export default function FinalCTA() {
               asChild
               size="lg"
               variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8 py-6"
+              className="border-black bg-black text-white hover:bg-primary-foreground hover:text-primary text-base px-8 py-6"
             >
               <a href={`tel:${siteConfig.phone}`}>
                 <Phone className="mr-2 w-4 h-4" />
