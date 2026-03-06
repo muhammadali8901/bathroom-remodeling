@@ -13,7 +13,7 @@
 - `app/layout.tsx` – Metadata, OG, Twitter
 
 **Homepage**
-- `app/page.tsx` – Section order, KitchenSection removed, FAQ city
+- `app/page.tsx` – Section order, legacy section removed, FAQ city
 - `components/home/hero.tsx` – Headline, alt, CTA copy, View Portfolio button (black bg)
 - `components/home/about-preview.tsx` – Brand, alt
 - `components/home/services-grid.tsx` – 10 bathroom micro-service cards
@@ -40,7 +40,7 @@
 - `app/privacy-policy/page.tsx` – Metadata
 - `app/terms-of-service/page.tsx` – Metadata, services list
 - `app/admin/testimonials/page.tsx` – Placeholder city
-- `app/sitemap.ts` – Kitchen-remodeling removed from static pages
+- `app/sitemap.ts` – Legacy service removed from static pages
 
 **New**
 - `COLOR_PALETTE.md` – Documented color palette
@@ -62,8 +62,8 @@
 ## 3. Services Updated
 
 **Removed from UI**
-- Kitchen Remodeling (hidden from nav, footer, homepage, service listings)
-- Kitchen page file retained at `/kitchen-remodeling` (not linked)
+- Legacy service (hidden from nav, footer, homepage, service listings)
+- Legacy page file retained at `/kitchen-remodeling` (not linked)
 
 **Bathroom micro-services added**
 - Shower Remodeling
@@ -116,7 +116,7 @@
 ## 7. UI Protection Checklist
 
 - No UI layout changes
-- No sections removed (KitchenSection component file kept; not rendered)
+- No sections removed (legacy section component kept; not rendered)
 - No CSS classes deleted
 - Responsiveness preserved
 - Mobile layout intact

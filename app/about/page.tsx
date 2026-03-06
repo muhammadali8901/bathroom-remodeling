@@ -10,10 +10,10 @@ import { BreadcrumbSchema } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = {
   title: "About Us | Best Bathroom Remodel Company Near Me in Chandler, AZ",
-  description: `Learn about Chandler Bath & Kitchen, Chandler, Arizona's premier bathroom remodeling company. 15+ years of experience, 500+ projects completed, and trusted bathroom remodelers near me with a satisfaction guarantee.`,
+  description: `Learn about Chandler Bathroom Remodeling, Chandler, Arizona's premier bathroom remodeling company. 15+ years of experience, 500+ projects completed, and trusted bathroom remodelers near me with a satisfaction guarantee.`,
   keywords: ["about bathroom remodeling", "bathroom contractors Chandler Arizona", "best remodelers near me", "local bathroom company", "experienced remodelers"],
   openGraph: {
-    title: "About Chandler Bath & Kitchen | Premium Bathroom Remodeling",
+    title: "About Chandler Bathroom Remodeling | Premium Bathroom Remodeling",
     description: "Award-winning bathroom remodeling company in Chandler, AZ with 15+ years of expertise and customer-first service.",
     url: `${siteConfig.url}/about`,
     type: "website",
@@ -69,7 +69,7 @@ export default function AboutPage() {
                 Our Story
               </span>
               <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground text-balance">
-                Our Story: About {siteConfig.name}
+                Our Story: About Chandler Bathroom Remodeling
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
                 For over 15 years, we have been transforming bathrooms across 
@@ -124,7 +124,7 @@ export default function AboutPage() {
                   Building Dream Spaces Since 2010
                 </h2>
                 <p className="mt-6 text-muted-foreground leading-relaxed">
-                  {siteConfig.name} was founded with a simple mission: to help homeowners 
+                  Chandler Bathroom Remodeling was founded with a simple mission: to help homeowners 
                   in Chandler, Arizona create beautiful, functional spaces they love. What 
                   started as a small family business has grown into the region&apos;s most 
                   trusted remodeling company - the best bathroom remodelers near me.
@@ -276,7 +276,7 @@ export default function AboutPage() {
                 },
                 {
                   award: "Certified Professional",
-                  issuer: "National Kitchen & Bath Association",
+                  issuer: "National Bath Association",
                   year: "2024"
                 }
               ].map((recognition, index) => (

@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: "Chandler Bath & Kitchen",
+  name: "Chandler Bathroom Remodeling",
   tagline: "Luxury Bathroom Remodeling",
   description: "Premier bathroom remodeling services in Chandler, Arizona. Transform your bathroom with expert craftsmanship, premium finishes, and timeless design.",
-  url: "https://chandlerbathandkitchen.com",
+  url: "https://chandlerbathremodeling.com",
   phone: "(480) 555-0123",
-  email: "info@chandlerbathandkitchen.com",
+  email: "info@chandlerbathremodeling.com",
   address: {
     street: "123 Main Street",
     city: "Chandler",
@@ -22,10 +22,10 @@ export const siteConfig = {
     sunday: "Closed"
   },
   social: {
-    facebook: "https://facebook.com/chandlerbathandkitchen",
-    instagram: "https://instagram.com/chandlerbathandkitchen",
+    facebook: "https://facebook.com/chandlerbathremodeling",
+    instagram: "https://instagram.com/chandlerbathremodeling",
     twitter: "https://twitter.com/chandlerbathaz",
-    pinterest: "https://pinterest.com/chandlerbathandkitchen"
+    pinterest: "https://pinterest.com/chandlerbathremodeling"
   },
   navigation: [
     { name: "Home", href: "/" },

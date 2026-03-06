@@ -15,7 +15,7 @@ export function Footer() {
                 Chandler
               </span>
               <span className="block text-xs tracking-[0.2em] uppercase text-background/60 -mt-1">
-                Bath & Kitchen
+                Bathroom Remodeling
               </span>
             </Link>
             <p className="text-background/70 text-sm leading-relaxed mb-6">

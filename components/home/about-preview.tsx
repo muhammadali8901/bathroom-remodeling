@@ -43,7 +43,7 @@ export default function AboutPreview() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=75&w=800&auto=format&fit=crop&fm=webp"
-                alt="Chandler Bath & Kitchen team at work - best bathroom remodel company near me"
+                alt="Chandler Bathroom Remodeling team at work - best bathroom remodel company near me"
                 fill
                 className="object-cover"
                 quality={70}
@@ -84,7 +84,7 @@ export default function AboutPreview() {
               Crafting Dream Spaces Since 2008
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Chandler Bath & Kitchen was founded with a simple mission: to transform ordinary 
+              Chandler Bathroom Remodeling was founded with a simple mission: to transform ordinary 
               spaces into extraordinary ones. What started as a small family business has 
               grown into one of Chandler&apos;s most trusted remodeling companies and the best bathroom remodelers near me.
             </p>

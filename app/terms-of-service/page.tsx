@@ -4,8 +4,8 @@ import { Footer } from "@/components/layout/footer"
 import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Chandler Bath & Kitchen",
-  description: "Terms of Service for Chandler Bath & Kitchen. Read our terms and conditions for using our services.",
+  title: "Terms of Service | Chandler Bathroom Remodeling",
+  description: "Terms of Service for Chandler Bathroom Remodeling. Read our terms and conditions for using our services.",
 }
 
 export default function TermsOfServicePage() {

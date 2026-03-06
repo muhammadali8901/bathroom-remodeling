@@ -9,10 +9,10 @@ import { BreadcrumbSchema } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = {
   title: "Contact Us | Free Bathroom Remodel Estimate in Chandler, AZ",
-  description: `Contact Chandler Bath & Kitchen for your free bathroom remodeling estimate. Serving Chandler, Sun Lakes, Ahwatukee, Tempe, Mesa, and South Phoenix. Call (480) 555-0123 or book online today.`,
+  description: `Contact Chandler Bathroom Remodeling for your free bathroom remodeling estimate. Serving Chandler, Sun Lakes, Ahwatukee, Tempe, Mesa, and South Phoenix. Call (480) 555-0123 or book online today.`,
   keywords: ["bathroom remodel near me", "contact remodeling company", "free estimate", "bathroom contractor Chandler", "bathroom contractor"],
   openGraph: {
-    title: "Contact Chandler Bath & Kitchen | Free Remodeling Estimate",
+    title: "Contact Chandler Bathroom Remodeling | Free Remodeling Estimate",
     description: "Get your free bathroom remodeling estimate today. Licensed, insured, and trusted by Chandler homeowners.",
     url: `${siteConfig.url}/contact`,
     type: "website",
@@ -72,7 +72,7 @@ export default function ContactPage() {
                 <h3 className="font-serif font-semibold text-foreground mb-2">Email</h3>
                 <a 
                   href={`mailto:${siteConfig.email}`} 
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors block text-sm leading-snug"
                 >
                   {siteConfig.email}
                 </a>
@@ -122,7 +122,7 @@ export default function ContactPage() {
                 {
                   name: "Sarah Johnson",
                   project: "Master Bathroom Remodel",
-                  text: "Chandler Bath & Kitchen transformed our outdated bathroom into a luxury spa-like retreat. The craftsmanship is exceptional!",
+                  text: "Chandler Bathroom Remodeling transformed our outdated bathroom into a luxury spa-like retreat. The craftsmanship is exceptional!",
                   rating: 5
                 },
                 {

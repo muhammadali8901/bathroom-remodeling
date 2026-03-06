@@ -9,15 +9,15 @@ import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const kitchenFeatures = [
-  "Custom Cabinet Design",
-  "Countertop Installation",
-  "Kitchen Islands",
-  "Backsplash & Tile",
-  "Lighting Design",
-  "Full Kitchen Renovations",
+  "Legacy cabinet design",
+  "Countertop installation",
+  "Island builds",
+  "Backsplash & tile",
+  "Lighting design",
+  "Full remodels",
 ];
 
-export default function KitchenSection() {
+export default function LegacySection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -33,15 +33,14 @@ export default function KitchenSection() {
             className="order-2 lg:order-1"
           >
             <span className="text-primary text-sm font-medium tracking-wider uppercase">
-              Also Expert In
+              Legacy Service
             </span>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-6 text-foreground text-balance">
-              Beautiful Kitchen Remodeling
+              Legacy Remodeling (Unavailable)
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              The kitchen is the heart of your home. Our kitchen renovation experts create 
-              functional, beautiful spaces where families gather and memories are made. 
-              From minor updates to complete transformations, we deliver exceptional results.
+              This legacy service is no longer offered. Please explore our bathroom remodeling
+              services for current offerings.
             </p>
 
             {/* Features List */}
@@ -62,8 +61,8 @@ export default function KitchenSection() {
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground group"
             >
-              <Link href="/kitchen-remodeling">
-                Explore Kitchen Services
+              <Link href="/">
+                View Bathroom Services
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
@@ -79,7 +78,7 @@ export default function KitchenSection() {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <Image
                 src="/images/kitchen-showcase.jpg"
-                alt="Modern kitchen remodel with custom cabinets in Gilbert, Arizona"
+                alt="Legacy remodeling project preview"
                 fill
                 className="object-cover"
               />

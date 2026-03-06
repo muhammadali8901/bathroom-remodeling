@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site-config"
 import { Check, Calculator, Clock, Shield, CreditCard } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Bathroom Remodel Financing Near Me | Chandler Bath & Kitchen",
+  title: "Bathroom Remodel Financing Near Me | Chandler Bathroom Remodeling",
   description: "Looking for bathroom remodel financing near me? Flexible financing options for your bathroom remodeling project in Chandler, Arizona. Low monthly payments and competitive rates available. Bathroom remodel with financing near me.",
 }
 

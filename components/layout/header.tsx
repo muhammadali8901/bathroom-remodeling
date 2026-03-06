@@ -54,7 +54,7 @@ export function Header() {
                 Chandler
               </span>
               <span className="text-xs tracking-[0.2em] uppercase text-muted-foreground -mt-1">
-                Bath & Kitchen
+                Bathroom Remodeling
               </span>
             </div>
           </Link>

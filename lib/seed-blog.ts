@@ -1,4 +1,4 @@
-// Default SEO-optimized blog post for Chandler Bath & Kitchen
+// Default SEO-optimized blog post for Chandler Bathroom Remodeling
 export const defaultBlogPost = {
   title: "Complete Guide to Bathroom Remodeling in Chandler, Arizona",
   slug: "complete-guide-bathroom-remodeling-chandler-arizona",
@@ -176,17 +176,17 @@ To get the most value from your bathroom remodel:
 
 A bathroom remodel is a significant investment that can dramatically improve your daily life and increase your home's value. By planning carefully, choosing the right contractor, and making informed material selections, you can create a bathroom that serves your family beautifully for years to come.
 
-Ready to start your bathroom remodeling project in Chandler, Arizona? Contact Chandler Bath & Kitchen today for a free consultation and estimate. Our experienced team has been transforming bathrooms throughout the Chandler area for over 15 years, and we're committed to exceeding your expectations.
+Ready to start your bathroom remodeling project in Chandler, Arizona? Contact Chandler Bathroom Remodeling today for a free consultation and estimate. Our experienced team has been transforming bathrooms throughout the Chandler area for over 15 years, and we're committed to exceeding your expectations.
 
 ---
 
-*Chandler Bath & Kitchen is the premier bathroom remodeling company serving Chandler, Chandler, Mesa, Chandler, Tempe, Scottsdale, and Phoenix. Contact us at (480) 555-0123 or visit our showroom to discuss your project.*
+*Chandler Bathroom Remodeling is the premier bathroom remodeling company serving Chandler, Mesa, Tempe, Scottsdale, and Phoenix. Contact us at (480) 555-0123 or visit our showroom to discuss your project.*
   `,
-  author: "Chandler Bath & Kitchen Team",
+  author: "Chandler Bathroom Remodeling Team",
   category: "Bathroom Remodeling",
   tags: ["bathroom remodeling", "chandler arizona", "home improvement", "bathroom renovation", "contractor"],
   featuredImage: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2574&auto=format&fit=crop",
-  metaTitle: "Complete Guide to Bathroom Remodeling in Chandler, Arizona | Chandler Bath & Kitchen",
+  metaTitle: "Complete Guide to Bathroom Remodeling in Chandler, Arizona | Chandler Bathroom Remodeling",
   metaDescription: "Expert guide to bathroom remodeling in Chandler, Arizona. Learn about costs, materials, timelines, and how to choose the right contractor for your renovation project.",
   metaKeywords: "bathroom remodeling chandler arizona, bathroom renovation chandler az, bathroom contractor chandler, shower remodel chandler arizona, bathroom design arizona",
   status: "published" as const,
@@ -254,61 +254,39 @@ export const defaultGalleryItems = [
     description: "ADA-compliant bathroom with curbless shower entry",
     featured: false,
   },
-  // Kitchen Gallery
   {
-    title: "Modern Kitchen Renovation",
-    category: "kitchen",
-    imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2574&auto=format&fit=crop",
-    description: "Open concept kitchen with white cabinets and quartz countertops",
-    featured: true,
-  },
-  {
-    title: "Custom Kitchen Island",
-    category: "kitchen",
-    imageUrl: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?q=80&w=2574&auto=format&fit=crop",
-    description: "Large kitchen island with waterfall edge countertop",
-    featured: true,
-  },
-  {
-    title: "Farmhouse Style Kitchen",
-    category: "kitchen",
-    imageUrl: "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?q=80&w=2574&auto=format&fit=crop",
-    description: "Warm farmhouse kitchen with shaker cabinets",
+    title: "Spa Shower Upgrade",
+    category: "bathroom",
+    imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2574&auto=format&fit=crop",
+    description: "Custom walk-in shower with glass enclosure and niche storage",
     featured: false,
   },
   {
-    title: "Contemporary Cabinet Design",
-    category: "kitchen",
-    imageUrl: "https://images.unsplash.com/photo-1556909114-44e3e70034e2?q=80&w=2574&auto=format&fit=crop",
-    description: "Sleek modern cabinets with integrated handles",
+    title: "Luxury Bathtub Suite",
+    category: "bathroom",
+    imageUrl: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=2574&auto=format&fit=crop",
+    description: "Freestanding soaking tub with coordinated fixtures and tile",
     featured: false,
   },
   {
-    title: "Kitchen Backsplash Upgrade",
-    category: "kitchen",
+    title: "Curbless Shower Design",
+    category: "bathroom",
     imageUrl: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2574&auto=format&fit=crop",
-    description: "Stunning marble backsplash with herringbone pattern",
+    description: "Accessible curbless shower with linear drain and bench",
     featured: false,
   },
   {
-    title: "Gourmet Kitchen Design",
-    category: "kitchen",
-    imageUrl: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2574&auto=format&fit=crop",
-    description: "Professional-grade appliances with custom cabinetry",
-    featured: false,
-  },
-  {
-    title: "Transitional Kitchen Remodel",
-    category: "kitchen",
+    title: "Vanity & Storage Refresh",
+    category: "bathroom",
     imageUrl: "https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=2574&auto=format&fit=crop",
-    description: "Blend of traditional and modern elements",
+    description: "Double-sink vanity with ample storage and warm lighting",
     featured: false,
   },
   {
-    title: "Small Kitchen Makeover",
-    category: "kitchen",
+    title: "Tile Accent Bath",
+    category: "bathroom",
     imageUrl: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=2574&auto=format&fit=crop",
-    description: "Maximizing storage and functionality in a compact space",
+    description: "Statement tile feature wall with coordinated flooring",
     featured: false,
   },
 ];

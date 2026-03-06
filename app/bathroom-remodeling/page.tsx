@@ -17,9 +17,6 @@ import {
   ShowerHead,
   Bath,
   Grid3X3,
-  Lightbulb,
-  Droplets,
-  Home,
   TrendingUp,
   DollarSign,
   Clock,
@@ -110,7 +107,7 @@ const subServices = [
   },
   {
     id: "bathroom-vanity-installation",
-    icon: Home,
+    icon: Grid3X3,
     title: "Bathroom Vanity Installation",
     description:
       "Install a bathroom vanity that improves storage, workflow, and visual balance. We coordinate cabinet size, countertop selection, sink setup, and hardware details.",
@@ -123,38 +120,6 @@ const subServices = [
       "Fixture and mirror compatibility",
     ],
   },
-  {
-    id: "bathroom-flooring",
-    icon: Grid3X3,
-    title: "Bathroom Flooring",
-    description:
-      "Refresh your bathroom floor with water-friendly materials that improve traction, appearance, and long-term durability.",
-    image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=2669&auto=format&fit=crop",
-    features: [
-      "Durable tile and flooring selections",
-      "Moisture-resistant installation systems",
-      "Slip-resistant finish options",
-      "Subfloor preparation and leveling",
-      "Seamless transitions and trim details",
-    ],
-  },
-  {
-    id: "bathroom-lighting-upgrade",
-    icon: Lightbulb,
-    title: "Bathroom Lighting Upgrade",
-    description:
-      "Improve the feel and functionality of your bathroom with upgraded lighting that supports grooming, ambiance, and energy efficiency.",
-    image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=2576&auto=format&fit=crop",
-    features: [
-      "Vanity lighting improvements",
-      "Ambient and task lighting layers",
-      "Energy-efficient LED upgrades",
-      "Accent lighting for mirrors and niches",
-      "Updated switches and dimming options",
-    ],
-  },
-  {
-  // trimmed to 8 services per request
 ];
 
 const issues = [
@@ -186,7 +151,7 @@ const issues = [
 
 const benefits = [
   {
-    icon: Home,
+    icon: Grid3X3,
     title: "Increased Home Value",
     description: "Bathroom remodels offer one of the highest returns on investment, typically recouping 60-70% of costs at resale.",
   },

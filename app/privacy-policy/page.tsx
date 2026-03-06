@@ -4,8 +4,8 @@ import { Footer } from "@/components/layout/footer"
 import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Chandler Bath & Kitchen",
-  description: "Privacy Policy for Chandler Bath & Kitchen. Learn how we collect, use, and protect your personal information.",
+  title: "Privacy Policy | Chandler Bathroom Remodeling",
+  description: "Privacy Policy for Chandler Bathroom Remodeling. Learn how we collect, use, and protect your personal information.",
 }
 
 export default function PrivacyPolicyPage() {

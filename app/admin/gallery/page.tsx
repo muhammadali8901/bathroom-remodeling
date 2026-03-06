@@ -28,7 +28,6 @@ import { Plus, Pencil, Trash2, Eye, EyeOff, Grid, List } from "lucide-react"
 
 const categories = [
   { value: "bathroom", label: "Bathroom Remodeling" },
-  { value: "kitchen", label: "Kitchen Remodeling" },
   { value: "shower", label: "Shower Remodel" },
   { value: "vanity", label: "Vanity & Countertops" },
 ]

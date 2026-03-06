@@ -1,10 +1,4 @@
-import {
-  ShowerHead,
-  Bath,
-  Grid3X3,
-  Lightbulb,
-  LucideIcon,
-} from "lucide-react";
+import { ShowerHead, Bath, Grid3X3, LucideIcon } from "lucide-react";
 
 export type BathroomService = {
   name: string;
@@ -14,13 +8,6 @@ export type BathroomService = {
 };
 
 export const bathroomServices: BathroomService[] = [
-  {
-    name: "Bathroom Remodeling",
-    href: "/bathroom-remodeling",
-    description:
-      "Complete bathroom renovations from planning through finishing touches.",
-    icon: ShowerHead,
-  },
   {
     name: "Shower Remodeling",
     href: "/shower-remodeling",
@@ -62,19 +49,5 @@ export const bathroomServices: BathroomService[] = [
     description:
       "Stylish vanities with smart storage, durable tops, and coordinated sinks.",
     icon: Grid3X3,
-  },
-  {
-    name: "Bathroom Flooring",
-    href: "/bathroom-flooring",
-    description:
-      "Moisture-resistant bathroom flooring upgrades built for durability.",
-    icon: Grid3X3,
-  },
-  {
-    name: "Bathroom Lighting Upgrade",
-    href: "/bathroom-lighting-upgrade",
-    description:
-      "Layered bathroom lighting that improves visibility, ambiance, and efficiency.",
-    icon: Lightbulb,
   },
 ];

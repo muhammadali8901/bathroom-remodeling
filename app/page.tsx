@@ -74,12 +74,12 @@ const homeFaqs = [
   {
     question: "Are you the best bathroom remodel company near me?",
     answer:
-      "Yes! Chandler Bath & Kitchen is consistently rated as one of the top bathroom remodelers near me. We offer complimentary in-home consultations where our design experts will assess your space and provide a detailed estimate.",
+      "Yes! Chandler Bathroom Remodeling is consistently rated as one of the top bathroom remodelers near me. We offer complimentary in-home consultations where our design experts will assess your space and provide a detailed estimate.",
   },
   {
     question: "Are you licensed and insured for remodeling work in Arizona?",
     answer:
-      "Absolutely. Chandler Bath & Kitchen is fully licensed (ROC #123456), bonded, and insured for residential remodeling in Arizona. We are proud to be the best bathroom remodel company near me.",
+      "Absolutely. Chandler Bathroom Remodeling is fully licensed (ROC #123456), bonded, and insured for residential remodeling in Arizona. We are proud to be the best bathroom remodel company near me.",
   },
 ];
 

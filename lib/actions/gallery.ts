@@ -39,7 +39,7 @@ export async function getGalleryItems(): Promise<GalleryItem[]> {
 }
 
 export async function getGalleryItemsByCategory(
-  category: "bathroom" | "kitchen"
+  category: "bathroom" | "shower" | "vanity"
 ): Promise<GalleryItem[]> {
   try {
     const galleryRef = collection(db, GALLERY_COLLECTION);

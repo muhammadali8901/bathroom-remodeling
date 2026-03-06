@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "Are you the best bathroom remodel company near me?",
     answer:
-      "Chandler Bath & Kitchen is consistently rated as the best bathroom remodel company near me by our customers. We're fully licensed (ROC #123456), bonded, and insured for residential remodeling in Arizona. With 15+ years of experience and hundreds of 5-star reviews, we're the top-rated bathroom remodelers near me in Chandler and the East Valley.",
+      "Chandler Bathroom Remodeling is consistently rated as the best bathroom remodel company near me by our customers. We're fully licensed (ROC #123456), bonded, and insured for residential remodeling in Arizona. With 15+ years of experience and hundreds of 5-star reviews, we're the top-rated bathroom remodelers near me in Chandler and the East Valley.",
   },
   {
     question: "Do you offer handicap bathroom remodel contractors near me services?",
