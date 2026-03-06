@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Star } from "lucide-react";
+import { Star, Shield, Award, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const trustBadges = [
@@ -85,7 +85,7 @@ export default function Hero() {
                 </span>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
 
