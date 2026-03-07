@@ -1064,6 +1064,8 @@ export function generateStaticParams() {
   return Object.keys(serviceMap).map((slug) => ({ service: slug }));
 }
 
+export const dynamicParams = false;
+
 export function generateMetadata({
   params,
 }: {
