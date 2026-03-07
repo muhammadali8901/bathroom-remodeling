@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import type { LucideIcon } from "lucide-react";
+
 import {
   Bath,
   Droplets,
@@ -48,7 +48,7 @@ type ServiceDetail = {
     description: string;
     steps: {
       number: string;
-      icon: LucideIcon;
+      icon: string;
       title: string;
       description: string;
     }[];
@@ -58,7 +58,7 @@ type ServiceDetail = {
     solution: string;
   }[];
   benefits: {
-    icon: LucideIcon;
+    icon: string;
     title: string;
     description: string;
   }[];
@@ -139,31 +139,31 @@ const serviceContent: Record<string, ServiceDetail> = {
       steps: [
         {
           number: "01",
-          icon: PhoneCall,
+          icon: "PhoneCall",
           title: "Consultation & Measurements",
           description: "We review goals, measure your shower footprint, and plan waterproofing details.",
         },
         {
           number: "02",
-          icon: Ruler,
+          icon: "Ruler",
           title: "Design & Selections",
           description: "Tile, glass, fixtures, and drainage layout tailored to your style and daily routine.",
         },
         {
           number: "03",
-          icon: Hammer,
+          icon: "Hammer",
           title: "Demo & Prep",
           description: "Clean demolition, substrate repair, and moisture barrier installation for durability.",
         },
         {
           number: "04",
-          icon: ShowerHead,
+          icon: "ShowerHead",
           title: "Tile & Fixture Install",
           description: "Precision tile setting, niche detailing, and valve/fixture installation for a spa feel.",
         },
         {
           number: "05",
-          icon: ShieldCheck,
+          icon: "ShieldCheck",
           title: "Inspection & Walkthrough",
           description: "Sealing, testing, and a final walkthrough to confirm drainage, fit, and finish.",
         },
@@ -193,27 +193,27 @@ const serviceContent: Record<string, ServiceDetail> = {
     ],
     benefits: [
       {
-        icon: Sparkles,
+        icon: "Sparkles",
         title: "Spa-Level Look",
         description: "Frameless glass, premium tile, and clean lines create a relaxing Chandler retreat.",
       },
       {
-        icon: ShieldCheck,
+        icon: "ShieldCheck",
         title: "Leak Protection",
         description: "Moisture barriers and sealed corners protect walls and subflooring from damage.",
       },
       {
-        icon: Droplets,
+        icon: "Droplets",
         title: "Better Drainage",
         description: "Proper slopes and upgraded drains reduce standing water and keep grout cleaner.",
       },
       {
-        icon: TrendingUp,
+        icon: "TrendingUp",
         title: "Higher Home Value",
         description: "A modern shower is a top buyer priority in Chandler's competitive market.",
       },
       {
-        icon: Timer,
+        icon: "Timer",
         title: "Faster Mornings",
         description: "Organized niches and improved lighting streamline daily routines.",
       },
@@ -300,31 +300,31 @@ const serviceContent: Record<string, ServiceDetail> = {
       steps: [
         {
           number: "01",
-          icon: PhoneCall,
+          icon: "PhoneCall",
           title: "Consult & Measure",
           description: "Confirm tub size, clearance, and venting requirements for your Chandler home.",
         },
         {
           number: "02",
-          icon: Bath,
+          icon: "Bath",
           title: "Tub Selection",
           description: "Select alcove or freestanding tubs, drain orientation, and coordinated trim.",
         },
         {
           number: "03",
-          icon: Wrench,
+          icon: "Wrench",
           title: "Plumbing Prep",
           description: "Set the drain, trap, and supply lines to manufacturer specs for leak-free use.",
         },
         {
           number: "04",
-          icon: Hammer,
+          icon: "Hammer",
           title: "Set & Level",
           description: "Secure and level the tub, foam-support if required, and verify slope to drain.",
         },
         {
           number: "05",
-          icon: Sparkles,
+          icon: "Sparkles",
           title: "Finish & Seal",
           description: "Install surround finishes, trim, and waterproof caulk for a clean, polished look.",
         },
@@ -354,27 +354,27 @@ const serviceContent: Record<string, ServiceDetail> = {
     ],
     benefits: [
       {
-        icon: Bath,
+        icon: "Bath",
         title: "Comfortable Soaks",
         description: "Ergonomic tub selections tailored to how you relax and bathe.",
       },
       {
-        icon: ShieldCheck,
+        icon: "ShieldCheck",
         title: "Leak-Safe Setup",
         description: "Proper drains, traps, and seals keep moisture away from framing.",
       },
       {
-        icon: TrendingUp,
+        icon: "TrendingUp",
         title: "Resale Appeal",
         description: "Fresh tubs with coordinated trim help listings stand out in Chandler.",
       },
       {
-        icon: Timer,
+        icon: "Timer",
         title: "Quick Installs",
         description: "Efficient scheduling minimizes downtime so your bath is back in service fast.",
       },
       {
-        icon: Sparkles,
+        icon: "Sparkles",
         title: "Clean Finishes",
         description: "Trim, caulk, and surrounds are detailed for a showroom-ready look.",
       },
@@ -460,31 +460,31 @@ const serviceContent: Record<string, ServiceDetail> = {
       steps: [
         {
           number: "01",
-          icon: PhoneCall,
+          icon: "PhoneCall",
           title: "Site Review",
           description: "We inspect access paths, plumbing, and venting to plan a clean removal.",
         },
         {
           number: "02",
-          icon: Hammer,
+          icon: "Hammer",
           title: "Removal & Disposal",
           description: "Careful demo of the old tub and debris haul-away without damaging nearby finishes.",
         },
         {
           number: "03",
-          icon: Wrench,
+          icon: "Wrench",
           title: "Rough-In Adjustments",
           description: "Update drains, supply lines, and blocking to fit the new tub perfectly.",
         },
         {
           number: "04",
-          icon: Bath,
+          icon: "Bath",
           title: "Set New Tub",
           description: "Level, secure, and test the new bathtub with proper support and sealing.",
         },
         {
           number: "05",
-          icon: Sparkles,
+          icon: "Sparkles",
           title: "Trim & Finish",
           description: "Refinish surrounds, replace caulk, and clean the space for immediate use.",
         },
@@ -514,27 +514,27 @@ const serviceContent: Record<string, ServiceDetail> = {
     ],
     benefits: [
       {
-        icon: ShieldCheck,
+        icon: "ShieldCheck",
         title: "Reliable Plumbing",
         description: "Fresh drains and seals reduce the risk of hidden leaks and damage.",
       },
       {
-        icon: TrendingUp,
+        icon: "TrendingUp",
         title: "Value Boost",
         description: "A clean, modern tub improves listing photos and buyer impressions.",
       },
       {
-        icon: Sparkles,
+        icon: "Sparkles",
         title: "Modern Aesthetics",
         description: "Updated silhouettes and finishes match today's Chandler bathroom styles.",
       },
       {
-        icon: Timer,
+        icon: "Timer",
         title: "Quick Turnaround",
         description: "Efficient removal and install keep downtime low so you can keep routines.",
       },
       {
-        icon: Droplets,
+        icon: "Droplets",
         title: "Cleaner Surrounds",
         description: "Fresh caulk and sealed seams make maintenance easier and resist mildew.",
       },
@@ -620,31 +620,31 @@ const serviceContent: Record<string, ServiceDetail> = {
       steps: [
         {
           number: "01",
-          icon: PhoneCall,
+          icon: "PhoneCall",
           title: "Accessibility Review",
           description: "We assess clearances, thresholds, and grab bar locations for safe entry.",
         },
         {
           number: "02",
-          icon: Layout,
+          icon: "Layout",
           title: "Layout & Glass Plan",
           description: "Design open sightlines, glass sizing, and storage niches for daily use.",
         },
         {
           number: "03",
-          icon: ShieldCheck,
+          icon: "ShieldCheck",
           title: "Waterproofing",
           description: "Install pan, membrane, and backer systems to protect framing long-term.",
         },
         {
           number: "04",
-          icon: ShowerHead,
+          icon: "ShowerHead",
           title: "Tile & Fixture Install",
           description: "Set slip-resistant floors, tile walls, and accessible fixture heights.",
         },
         {
           number: "05",
-          icon: Sparkles,
+          icon: "Sparkles",
           title: "Testing & Handoff",
           description: "Drainage, glass alignment, and safety checks before your walkthrough.",
         },
@@ -674,27 +674,27 @@ const serviceContent: Record<string, ServiceDetail> = {
     ],
     benefits: [
       {
-        icon: ShieldCheck,
+        icon: "ShieldCheck",
         title: "Safer Entry",
         description: "Low or curbless thresholds reduce trip hazards for every family member.",
       },
       {
-        icon: Layout,
+        icon: "Layout",
         title: "Open Layout",
         description: "Glass and thoughtful tile choices make the bathroom feel larger.",
       },
       {
-        icon: Sparkles,
+        icon: "Sparkles",
         title: "Modern Style",
         description: "Minimal hardware, clean lines, and premium fixtures elevate the look.",
       },
       {
-        icon: TrendingUp,
+        icon: "TrendingUp",
         title: "Home Value",
         description: "Accessible showers are highly requested by Chandler buyers and renters.",
       },
       {
-        icon: Droplets,
+        icon: "Droplets",
         title: "Easy Cleaning",
         description: "Smooth tile layouts and quality drains make upkeep simpler.",
       },
@@ -780,31 +780,31 @@ const serviceContent: Record<string, ServiceDetail> = {
       steps: [
         {
           number: "01",
-          icon: Ruler,
+          icon: "Ruler",
           title: "Layout & Design",
           description: "We plan patterns, grout lines, and transitions that align with fixtures and niches.",
         },
         {
           number: "02",
-          icon: HandCoins,
+          icon: "HandCoins",
           title: "Surface Prep",
           description: "Backer board, leveling, and crack isolation to keep tile stable over time.",
         },
         {
           number: "03",
-          icon: ShieldCheck,
+          icon: "ShieldCheck",
           title: "Waterproofing",
           description: "Membranes and seams sealed in wet zones to prevent moisture intrusion.",
         },
         {
           number: "04",
-          icon: Paintbrush,
+          icon: "Paintbrush",
           title: "Setting & Cuts",
           description: "Clean cuts, consistent spacing, and aligned edges around valves and corners.",
         },
         {
           number: "05",
-          icon: Sparkles,
+          icon: "Sparkles",
           title: "Grout & Seal",
           description: "Proper cure times, grout sealing, and a full cleanup before handoff.",
         },
@@ -834,27 +834,27 @@ const serviceContent: Record<string, ServiceDetail> = {
     ],
     benefits: [
       {
-        icon: Sparkles,
+        icon: "Sparkles",
         title: "Crisp Lines",
         description: "Aligned patterns, straight grout joints, and clean cuts elevate any bathroom.",
       },
       {
-        icon: ShieldCheck,
+        icon: "ShieldCheck",
         title: "Moisture Defense",
         description: "Waterproof assemblies keep walls and subfloors safe from damage.",
       },
       {
-        icon: TrendingUp,
+        icon: "TrendingUp",
         title: "Investment Value",
         description: "Quality tile work impresses buyers and lowers long-term maintenance.",
       },
       {
-        icon: Droplets,
+        icon: "Droplets",
         title: "Easy Cleaning",
         description: "Sealed grout and smooth transitions simplify weekly cleaning.",
       },
       {
-        icon: Layout,
+        icon: "Layout",
         title: "Custom Layouts",
         description: "Feature walls, borders, and niches tailored to your design vision.",
       },
@@ -940,31 +940,31 @@ const serviceContent: Record<string, ServiceDetail> = {
       steps: [
         {
           number: "01",
-          icon: Ruler,
+          icon: "Ruler",
           title: "Measure & Plan",
           description: "Confirm clearances, plumbing locations, and backsplash heights for a perfect fit.",
         },
         {
           number: "02",
-          icon: Layout,
+          icon: "Layout",
           title: "Select Vanity",
           description: "Choose single or double vanities, storage options, and countertop materials.",
         },
         {
           number: "03",
-          icon: HardHat,
+          icon: "HardHat",
           title: "Prep & Blocking",
           description: "Adjust plumbing stubs, add blocking, and level the wall area before install.",
         },
         {
           number: "04",
-          icon: Hammer,
+          icon: "Hammer",
           title: "Set & Level",
           description: "Secure the cabinet, shim for level, and verify drawer/door alignment.",
         },
         {
           number: "05",
-          icon: Sparkles,
+          icon: "Sparkles",
           title: "Top, Sink & Finish",
           description: "Install countertop, sink, faucet, and caulk seams for a clean, ready-to-use vanity.",
         },
@@ -994,27 +994,27 @@ const serviceContent: Record<string, ServiceDetail> = {
     ],
     benefits: [
       {
-        icon: Layout,
+        icon: "Layout",
         title: "Better Workflow",
         description: "Sized for your routine with organized storage where you need it most.",
       },
       {
-        icon: Sparkles,
+        icon: "Sparkles",
         title: "Polished Look",
         description: "Aligned tops, backsplash, and fixtures keep the vanity area seamless.",
       },
       {
-        icon: ShieldCheck,
+        icon: "ShieldCheck",
         title: "Durable Setup",
         description: "Proper sealing and moisture-resistant materials extend the vanity's life.",
       },
       {
-        icon: TrendingUp,
+        icon: "TrendingUp",
         title: "Value Add",
         description: "Modern vanities attract Chandler buyers who want a move-in-ready bath.",
       },
       {
-        icon: Timer,
+        icon: "Timer",
         title: "Quicker Mornings",
         description: "Organized drawers and lighting alignment speed up daily routines.",
       },
@@ -1066,13 +1066,14 @@ export function generateStaticParams() {
 
 export const dynamicParams = false;
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { service: string };
-}): Metadata {
-  const service = serviceMap[params.service];
-  const content = serviceContent[params.service];
+  params: Promise<{ service: string }>;
+}): Promise<Metadata> {
+  const { service: serviceSlug } = await params;
+  const service = serviceMap[serviceSlug];
+  const content = serviceContent[serviceSlug];
 
   if (!service || !content) return {};
 
@@ -1095,13 +1096,14 @@ const chandlerLocation = {
   lng: -111.8413,
 };
 
-export default function BathroomServicePage({
+export default async function BathroomServicePage({
   params,
 }: {
-  params: { service: string };
+  params: Promise<{ service: string }>;
 }) {
-  const service = serviceMap[params.service];
-  const content = serviceContent[params.service];
+  const { service: serviceSlug } = await params;
+  const service = serviceMap[serviceSlug];
+  const content = serviceContent[serviceSlug];
 
   if (!service || !content) {
     notFound();
@@ -1258,3 +1260,4 @@ export default function BathroomServicePage({
     </>
   );
 }
+

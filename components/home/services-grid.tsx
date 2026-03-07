@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { bathroomServices } from "@/lib/bathroom-services";
@@ -14,6 +14,11 @@ const services = bathroomServices
 export default function ServicesGrid() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <section ref={ref} className="py-20 lg:py-32 bg-secondary">
@@ -21,24 +26,24 @@ export default function ServicesGrid() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
           <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            initial={mounted ? { opacity: 0, y: 20 } : false}
+            animate={mounted && isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
             className="text-primary text-sm font-medium tracking-wider uppercase"
           >
             What We Do
           </motion.span>
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            initial={mounted ? { opacity: 0, y: 20 } : false}
+            animate={mounted && isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mt-4 mb-6 text-foreground text-balance"
           >
             Bathroom Remodeling Services
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            initial={mounted ? { opacity: 0, y: 20 } : false}
+            animate={mounted && isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground text-lg leading-relaxed"
           >
@@ -49,16 +54,16 @@ export default function ServicesGrid() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.name}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Link
+          {services.map((service, index) => {
+            const MotionLink = motion(Link);
+            return (
+              <MotionLink
+                key={service.name}
                 href={service.href}
                 className="group block bg-card border border-border rounded-xl p-8 h-full hover:shadow-lg hover:border-primary/20 transition-all duration-300"
+                initial={mounted ? { opacity: 0, y: 30 } : false}
+                animate={mounted && isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="flex items-start justify-between mb-6">
                   <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
@@ -72,9 +77,9 @@ export default function ServicesGrid() {
                 <p className="text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
-              </Link>
-            </motion.div>
-          ))}
+              </MotionLink>
+            );
+          })}
         </div>
       </div>
     </section>
