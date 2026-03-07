@@ -1100,8 +1100,13 @@ export default async function BathroomServicePage({
   params: Promise<{ service: string }>;
 }) {
   const { service: serviceSlug } = await params;
+  console.log("[v0] serviceSlug:", serviceSlug);
+  console.log("[v0] serviceMap keys:", Object.keys(serviceMap));
+  console.log("[v0] serviceContent keys:", Object.keys(serviceContent));
   const service = serviceMap[serviceSlug];
   const content = serviceContent[serviceSlug];
+  console.log("[v0] service found:", !!service);
+  console.log("[v0] content found:", !!content);
 
   if (!service || !content) {
     notFound();
