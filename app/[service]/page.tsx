@@ -1064,13 +1064,14 @@ export function generateStaticParams() {
   return Object.keys(serviceMap).map((slug) => ({ service: slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { service: string };
-}): Metadata {
-  const service = serviceMap[params.service];
-  const content = serviceContent[params.service];
+  params: Promise<{ service: string }>;
+}): Promise<Metadata> {
+  const { service: serviceSlug } = await params;
+  const service = serviceMap[serviceSlug];
+  const content = serviceContent[serviceSlug];
 
   if (!service || !content) return {};
 
@@ -1093,13 +1094,14 @@ const chandlerLocation = {
   lng: -111.8413,
 };
 
-export default function BathroomServicePage({
+export default async function BathroomServicePage({
   params,
 }: {
-  params: { service: string };
+  params: Promise<{ service: string }>;
 }) {
-  const service = serviceMap[params.service];
-  const content = serviceContent[params.service];
+  const { service: serviceSlug } = await params;
+  const service = serviceMap[serviceSlug];
+  const content = serviceContent[serviceSlug];
 
   if (!service || !content) {
     notFound();
