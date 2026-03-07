@@ -51,7 +51,7 @@ export default function ServicesGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
-              key={service.title}
+              key={service.name}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -67,7 +67,7 @@ export default function ServicesGrid() {
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
-                  {service.title}
+                  {service.name}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {service.description}
