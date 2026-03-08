@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export function InfoHeader() {
   return (
-    <div className="bg-foreground text-background h-[50px] flex items-center text-sm">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-foreground text-background h-[50px] flex items-center text-sm">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-end gap-6">
           <a 
