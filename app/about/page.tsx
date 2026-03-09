@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/footer"
 import { siteConfig } from "@/lib/site-config"
 import { Button } from "@/components/ui/button"
 import { Award, Users, Clock, Shield, CheckCircle2, ArrowRight, Phone, Pencil, Hammer, Sparkles, Star } from "lucide-react"
-import { BreadcrumbSchema } from "@/components/seo/json-ld"
+import { BreadcrumbSchema, FAQSchema } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = {
   title: "About Us | Best Bathroom Remodel Company Near Me in Chandler, AZ",
@@ -50,6 +50,25 @@ const milestones = [
   { number: "5", label: "Star Reviews" },
 ]
 
+const aboutFaqs = [
+  {
+    question: "How long has Chandler Bathroom Remodeling been in business?",
+    answer: "We have been serving Chandler, Arizona and surrounding areas for over 15 years, completing more than 500 bathroom remodeling projects with a 100% satisfaction rate."
+  },
+  {
+    question: "Are you licensed and insured in Arizona?",
+    answer: "Yes! Chandler Bathroom Remodeling is fully licensed (ROC #123456), bonded, and insured for residential remodeling in Arizona. We carry comprehensive liability and workers' compensation insurance for your protection."
+  },
+  {
+    question: "What areas do you serve in Arizona?",
+    answer: "We primarily serve Chandler, Arizona and nearby East Valley communities including Sun Lakes, Ahwatukee, Tempe, Mesa, and South Phoenix. Contact us to confirm service availability in your area."
+  },
+  {
+    question: "Do you offer free consultations and estimates?",
+    answer: "Yes! We provide complimentary in-home consultations where our design experts assess your space, discuss your vision, and provide detailed estimates with transparent pricing and no hidden fees."
+  }
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -59,6 +78,7 @@ export default function AboutPage() {
           { name: "About Us", url: `${siteConfig.url}/about` }
         ]} 
       />
+      <FAQSchema faqs={aboutFaqs} />
       <Header />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}

@@ -6,7 +6,7 @@ Documented from `app/globals.css` and design system usage.
 
 | Role | CSS Variable | Value | Usage |
 |------|--------------|-------|-------|
-| **Primary** | `--primary` | oklch(0.6 0.118 184.704) – Sky blue | Buttons, links, accents, icons |
+| **Primary** | `--primary` | oklch(0.55 0.13 184) – Sky blue | Buttons, links, accents, icons |
 | **Primary Foreground** | `--primary-foreground` | oklch(0.99 0.003 85) – Off-white | Text on primary buttons |
 | **Secondary** | `--secondary` | oklch(0.94 0.01 85) – Light beige | Section backgrounds |
 | **Accent** | `--accent` | oklch(0.55 0.08 85) – Muted gold | Hover states, ring focus |

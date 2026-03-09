@@ -33,7 +33,7 @@ import { GoogleMap } from "@/components/services/google-map";
 import SubServices from "@/components/services/sub-services";
 import { bathroomServices } from "@/lib/bathroom-services";
 import { siteConfig } from "@/lib/site-config";
-import { ServiceSchema } from "@/components/seo/json-ld";
+import { ServiceSchema, FAQSchema } from "@/components/seo/json-ld";
 
 type ServiceDetail = {
   hero: {
@@ -94,6 +94,118 @@ const serviceMap = bathroomServices.reduce<Record<string, (typeof bathroomServic
   },
   {}
 );
+
+// FAQ data for each service
+const serviceFaqs: Record<string, { question: string; answer: string }[]> = {
+  "shower-remodeling": [
+    {
+      question: "How long does a shower remodel take in Chandler, AZ?",
+      answer: "Most shower remodels in Chandler take 3-7 days depending on complexity. Simple tile updates may take 3-4 days, while complete custom showers with frameless glass and built-in features take 5-7 days. We provide a detailed timeline during your consultation."
+    },
+    {
+      question: "What is the cost of shower remodeling in Chandler?",
+      answer: "Shower remodeling costs in Chandler typically range from $5,000-$15,000 depending on size, materials, and features. Basic tile showers start around $5,000, while luxury showers with premium tile, frameless glass, and custom features can exceed $15,000. We offer free estimates with transparent pricing."
+    },
+    {
+      question: "Do you offer waterproof shower installations?",
+      answer: "Yes! All our shower installations include professional waterproofing systems that exceed industry standards. We use RedGard or Schluter waterproofing membranes to protect your walls and subfloors from moisture damage."
+    },
+    {
+      question: "Can you install frameless glass shower doors in Chandler?",
+      answer: "Absolutely! We specialize in frameless glass shower enclosures that create a modern, spa-like appearance. We measure precisely and install custom-cut tempered glass with premium hardware."
+    }
+  ],
+  "bathtub-installation": [
+    {
+      question: "How much does bathtub installation cost in Chandler, AZ?",
+      answer: "Bathtub installation in Chandler typically costs $1,500-$5,000 depending on tub type and complexity. Standard alcove tubs start around $1,500-$2,500, while freestanding soaking tubs and whirlpool installations range from $3,000-$5,000+. Contact us for a free estimate."
+    },
+    {
+      question: "How long does bathtub installation take?",
+      answer: "Most bathtub installations are completed in 1-3 days. Simple alcove tub replacements take 1-2 days, while freestanding tubs with new plumbing may take 2-3 days. We work efficiently to minimize disruption to your household."
+    },
+    {
+      question: "Do you install freestanding bathtubs?",
+      answer: "Yes! We install all types of bathtubs including freestanding soaking tubs, alcove tubs, whirlpool tubs, and air-jet tubs. Our team handles all plumbing connections, leveling, and finishing work."
+    },
+    {
+      question: "Can you install a bathtub in an existing bathroom?",
+      answer: "Absolutely! We specialize in bathtub installations for existing bathrooms. We assess your plumbing, reinforce the subfloor if needed, and ensure proper drainage and support for your new tub."
+    }
+  ],
+  "bathtub-replacement": [
+    {
+      question: "How much does bathtub replacement cost in Chandler?",
+      answer: "Bathtub replacement in Chandler typically costs $2,000-$6,000 including removal, disposal, and installation. Costs vary based on tub type, plumbing updates needed, and surround finishing. We provide free estimates with all costs outlined upfront."
+    },
+    {
+      question: "Can you replace a bathtub in one day?",
+      answer: "In many cases, yes! Standard tub-to-tub replacements can often be completed in 1-2 days. More complex replacements with plumbing updates or surround work may take 2-3 days. We'll provide an accurate timeline during your consultation."
+    },
+    {
+      question: "Do you remove and dispose of old bathtubs?",
+      answer: "Yes! We handle complete removal and disposal of your old bathtub. We protect your floors and walls during demolition and haul away all debris, leaving your space clean and ready for the new tub."
+    },
+    {
+      question: "Can you convert a bathtub to a walk-in shower?",
+      answer: "Absolutely! Tub-to-shower conversions are one of our most popular services. We remove your old tub and install a beautiful walk-in shower with tile, glass, and modern fixtures. This typically takes 5-7 days."
+    }
+  ],
+  "walk-in-shower-installation": [
+    {
+      question: "How much does walk-in shower installation cost in Chandler?",
+      answer: "Walk-in shower installation in Chandler typically costs $6,000-$15,000 depending on size, features, and accessibility requirements. Curbless showers with custom tile and glass start around $8,000, while luxury accessible showers can exceed $15,000."
+    },
+    {
+      question: "What is a curbless walk-in shower?",
+      answer: "A curbless walk-in shower has no threshold or step, creating a completely barrier-free entry. This design is ideal for wheelchair access, aging in place, and creating a modern, open bathroom aesthetic. We install proper drainage slopes to contain water."
+    },
+    {
+      question: "Are walk-in showers ADA compliant?",
+      answer: "Yes! We design and install ADA-compliant walk-in showers that meet all accessibility requirements including proper dimensions, grab bar placement, slip-resistant flooring, and accessible controls. Perfect for aging in place or mobility needs."
+    },
+    {
+      question: "How long does walk-in shower installation take?",
+      answer: "Walk-in shower installation typically takes 5-10 days in Chandler. Curbless showers may take longer due to floor preparation and waterproofing requirements. We provide a detailed timeline during your free consultation."
+    }
+  ],
+  "bathroom-tile-installation": [
+    {
+      question: "How much does bathroom tile installation cost in Chandler?",
+      answer: "Bathroom tile installation in Chandler costs $8-$25 per square foot depending on tile type and complexity. Basic ceramic tile starts around $8-$12/sq ft, while premium porcelain or natural stone ranges from $15-$25/sq ft. This includes materials, labor, and waterproofing."
+    },
+    {
+      question: "What type of tile is best for bathroom showers?",
+      answer: "Porcelain tile is ideal for bathroom showers due to its low water absorption, durability, and easy maintenance. We also recommend ceramic tile for budget-friendly options and natural stone for luxury aesthetics. All require proper waterproofing and sealing."
+    },
+    {
+      question: "Do you install tile on shower walls and floors?",
+      answer: "Yes! We install tile on shower walls, floors, backsplashes, and bathroom floors. We use proper waterproofing membranes, cement backer board, and premium thinset for long-lasting installations that resist moisture and mold."
+    },
+    {
+      question: "How long does bathroom tile installation take?",
+      answer: "Bathroom tile installation typically takes 3-7 days depending on the area being tiled. Shower walls take 3-4 days, while complete bathroom tile work (floors, walls, shower) takes 5-7 days including waterproofing, setting, grouting, and sealing."
+    }
+  ],
+  "bathroom-vanity-installation": [
+    {
+      question: "How much does bathroom vanity installation cost in Chandler?",
+      answer: "Bathroom vanity installation in Chandler costs $500-$2,000 for labor, plus the cost of the vanity itself. Standard single vanities range from $800-$2,500, while custom double vanities can exceed $3,000. We provide free estimates including all materials and labor."
+    },
+    {
+      question: "Can you install a double sink vanity?",
+      answer: "Yes! We install single and double sink vanities in all styles including freestanding, wall-mounted, and traditional floor-standing cabinets. We handle all plumbing connections, countertop installation, and finishing work."
+    },
+    {
+      question: "Do you remove and dispose of old vanities?",
+      answer: "Absolutely! We carefully remove your old vanity, disconnect plumbing, and haul away all debris. We protect your floors and walls during removal and leave your bathroom clean and ready for the new vanity."
+    },
+    {
+      question: "How long does vanity installation take?",
+      answer: "Most vanity installations are completed in 1 day. Simple vanity swaps take 4-6 hours, while installations requiring plumbing modifications or custom countertops may take 1-2 days. We work efficiently to minimize disruption."
+    }
+  ]
+};
 
 const serviceContent: Record<string, ServiceDetail> = {
   "shower-remodeling": {
@@ -1109,6 +1221,8 @@ export default async function BathroomServicePage({
     notFound();
   }
 
+  const faqs = serviceFaqs[serviceSlug] || [];
+
   return (
     <>
       <ServiceSchema
@@ -1116,6 +1230,7 @@ export default async function BathroomServicePage({
         serviceDescription={content.seo.description}
         serviceUrl={`${siteConfig.url}${service.href}`}
       />
+      {faqs.length > 0 && <FAQSchema faqs={faqs} />}
       <Header />
       <main>
         <ServiceHero

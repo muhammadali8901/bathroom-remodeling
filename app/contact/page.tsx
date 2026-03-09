@@ -5,7 +5,7 @@ import ContactSection from "@/components/home/contact-section"
 import { GoogleMap } from "@/components/services/google-map"
 import { siteConfig } from "@/lib/site-config"
 import { Phone, Mail, MapPin, Clock, Star } from "lucide-react"
-import { BreadcrumbSchema } from "@/components/seo/json-ld"
+import { BreadcrumbSchema, FAQSchema } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = {
   title: "Contact Us | Free Bathroom Remodel Estimate in Chandler, AZ",
@@ -19,6 +19,25 @@ export const metadata: Metadata = {
   },
 }
 
+const contactFaqs = [
+  {
+    question: "How do I schedule a free bathroom remodeling consultation in Chandler?",
+    answer: "You can schedule a free consultation by calling us at (480) 555-0123, filling out our online contact form, or emailing us at info@chandlerbathremodeling.com. We typically respond within 24 hours and can schedule consultations within the same week."
+  },
+  {
+    question: "What should I expect during the free consultation?",
+    answer: "During your free in-home consultation, our design expert will assess your bathroom, discuss your vision and needs, take measurements, answer questions, and provide a detailed estimate with transparent pricing. The consultation typically takes 45-60 minutes."
+  },
+  {
+    question: "How quickly can you start my bathroom remodeling project?",
+    answer: "Project start times vary based on our schedule and your availability. Many projects can begin within 1-3 weeks of signing the contract. We'll provide specific timing during your consultation and work to accommodate your schedule."
+  },
+  {
+    question: "Do you offer emergency bathroom repair services in Chandler?",
+    answer: "While we specialize in bathroom remodeling, we can address urgent issues like water damage or plumbing problems. Contact us immediately for emergency situations, and we'll assess how we can help or refer you to appropriate emergency services."
+  }
+];
+
 export default function ContactPage() {
   return (
     <>
@@ -28,6 +47,7 @@ export default function ContactPage() {
           { name: "Contact Us", url: `${siteConfig.url}/contact` }
         ]} 
       />
+      <FAQSchema faqs={contactFaqs} />
       <Header />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}

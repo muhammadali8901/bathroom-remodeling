@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Star, Shield, Award, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { QuoteForm } from "@/components/forms/quote-form";
 
 const trustBadges = [
   { icon: Star, label: "5-Star Rated" },
@@ -29,67 +30,73 @@ export default function Hero() {
 
       {/* Content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-32 pb-20 lg:pt-40 lg:pb-32">
-        <div className="max-w-3xl">
-          {/* Rating Badge */}
-          <div className="inline-flex items-center gap-2 bg-background/10 backdrop-blur-sm border border-background/20 rounded-full px-4 py-2 mb-8">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left Column - Hero Content */}
+          <div>
+            {/* Rating Badge */}
+            <div className="inline-flex items-center gap-2 bg-background/10 backdrop-blur-sm border border-background/20 rounded-full px-4 py-2 mb-8">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                ))}
+              </div>
+              <span className="text-background text-sm font-medium">
+                4.9 Rating on Google Reviews
+              </span>
+            </div>
+
+            {/* Headline */}
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-background leading-tight mb-6 text-balance">
+              Best Bathroom Remodeling Company in Chandler, Arizona
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-lg md:text-xl text-background/80 mb-10 leading-relaxed">
+              Looking for bathroom remodelers near me? Transform your bathroom into a luxurious retreat. 
+              Our expert craftsmen deliver stunning renovations across Chandler with bathroom remodel financing near me options available.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground text-base px-8 py-6"
+              >
+                <Link href="/contact">Get Your Free Estimate</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-black bg-black text-white hover:border-black/90 hover:bg-black/90 hover:text-white text-base px-8 py-6"
+              >
+                <Link href="/gallery">View Our Portfolio</Link>
+              </Button>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="grid grid-cols-2 gap-4">
+              {trustBadges.map((badge) => (
+                <div
+                  key={badge.label}
+                  className="flex items-center gap-3 bg-background/10 backdrop-blur-sm border border-background/20 rounded-lg px-4 py-3"
+                >
+                  <badge.icon className="w-5 h-5 text-primary" />
+                  <span className="text-background text-sm font-medium">
+                    {badge.label}
+                  </span>
+                </div>
               ))}
             </div>
-            <span className="text-background text-sm font-medium">
-              4.9 Rating on Google Reviews
-            </span>
           </div>
 
-          {/* Headline */}
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-background leading-tight mb-6 text-balance">
-            Best Bathroom Remodeling Company in Chandler, Arizona
-          </h1>
-
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl text-background/80 mb-10 max-w-2xl leading-relaxed">
-            Looking for bathroom remodelers near me? Transform your bathroom into a luxurious retreat. 
-            Our expert craftsmen deliver stunning renovations across Chandler with bathroom remodel financing near me options available.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-16">
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground text-base px-8 py-6"
-            >
-              <Link href="/contact">Get Your Free Estimate</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-black bg-black text-white hover:border-black/90 hover:bg-black/90 hover:text-white text-base px-8 py-6"
-            >
-              <Link href="/gallery">View Our Portfolio</Link>
-            </Button>
-          </div>
-
-          {/* Trust Badges */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {trustBadges.map((badge, index) => (
-              <div
-                key={badge.label}
-                className="flex items-center gap-3 bg-background/10 backdrop-blur-sm border border-background/20 rounded-lg px-4 py-3"
-              >
-                <badge.icon className="w-5 h-5 text-primary" />
-                <span className="text-background text-sm font-medium">
-                  {badge.label}
-                </span>
-              </div>
-            ))}
+          {/* Right Column - Quote Form */}
+          <div className="lg:block">
+            <QuoteForm />
           </div>
         </div>
       </div>
-
-
     </section>
   );
 }
